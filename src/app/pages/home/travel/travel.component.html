@@ -1,0 +1,105 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-6 col-md-12">
+              <div class="card card-nav-tabs">
+                  <div class="card-header" data-background-color="red">
+                      <div class="nav-tabs-navigation">
+                          <div class="nav-tabs-wrapper">
+                              <span class="nav-tabs-title"></span>
+                              <ul class="nav nav-tabs" data-tabs="tabs">
+                                  <li class="active">
+                                      <a href="#travelling" data-toggle="tab">
+                                          TRAVELLING
+                                          <div class="ripple-container"></div>
+                                      </a>
+                                  </li>
+                                  <li class="">
+                                      <a href="#request" data-toggle="tab">
+                                          REQUEST
+                                          <div class="ripple-container"></div>
+                                      </a>
+                                  </li>
+                                  <li class="">
+                                      <a href="#add" data-toggle="tab">
+                                          ADD
+                                          <div class="ripple-container"></div>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <div class="tab-content">
+                          <div class="tab-pane active" id="travelling">
+                              <table class="table table-hover">
+                                  <tbody>
+                                      <tr *ngFor="let lost of losts | async">
+                                          <td>
+                                              <b>{{ lost.item }}</b> - <a href="tel: + {{ lost.phone  }}">{{ lost.phone }}</a>
+                                              <p>{{ lost.location }}</p>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="tab-pane" id="request">
+                              <table class="table table-hover">
+                                  <tbody>
+                                      <tr *ngFor="let found of founds | async">
+                                          <td>
+                                              <b>{{ found.item }}</b> - <a href="tel: + {{ found.phone  }}">{{ found.phone }}</a>
+                                              <p>{{ found.location }}</p>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="tab-pane" id="add">
+                              <form name="myForm">
+
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group form-black label-floating is-empty">
+                                              <label class="control-label">Name</label>
+                                              <input type="text" class="form-control" #name>
+                                          </div>
+                                      </div>
+                                  </div>
+      
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group form-black label-floating is-empty">
+                                              <label class="control-label">Mobile Number</label>
+                                              <input type="number" class="form-control" #phone>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <br>
+                                  <input type="radio" id="test1" name="radiogroup" value="Travelling" checked>
+                                  <label for="test1">Travelling</label>
+                                  <input type="radio" id="test2" name="radiogroup" value="Request">
+                                  <label for="test2">Request</label>
+      
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group form-black label-floating is-empty">
+                                              <label class="control-label">Destination</label>
+                                              <input type="text" class="form-control" #destination>
+                                          </div>
+                                      </div>
+                                  </div>
+          
+                                  <button type="button" class="btn btn-danger pull-right" (click)="submit()">Submit</button>
+                                  <div class="clearfix"></div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>    
+  </div>
+</div>

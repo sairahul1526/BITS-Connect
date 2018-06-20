@@ -1,0 +1,114 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="card card-nav-tabs">
+                    <div class="card-header" data-background-color="red">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title"></span>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="active">
+                                        <a href="#buy" data-toggle="tab">
+                                            BUY
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#sell" data-toggle="tab">
+                                            SELL
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#add" data-toggle="tab">
+                                            ADD
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="buy">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr *ngFor="let buy of buys | async">
+                                            <td>
+                                                <b>{{ buy.item }}</b>
+                                                <p>{{ buy.name }} - <a href="tel: + {{ buy.phone  }}">{{ buy.phone }}</a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="sell">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr *ngFor="let sell of sells | async">
+                                            <td>
+                                                <b>{{ sell.item }} - ₹ {{ sell.price }}</b>
+                                                <p>{{ sell.name }} - <a href="tel: + {{ sell.phone }}">{{ sell.phone }}</a></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="add">
+                                <form name="myForm">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group form-black label-floating is-empty">
+                                                <label class="control-label">Full Name</label>
+                                                <input type="text" class="form-control" #name>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group form-black label-floating is-empty">
+                                                <label class="control-label">Mobile Number</label>
+                                                <input type="number" class="form-control" #phone>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <input type="radio" id="test1" name="radiogroup" value="Buy" checked>
+                                    <label for="test1">Buy</label>
+                                    <input type="radio" id="test2" name="radiogroup" value="Sell">
+                                    <label for="test2">Sell</label>
+        
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group form-black label-floating is-empty">
+                                                <label class="control-label">Item</label>
+                                                <input type="text" class="form-control" #item>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group form-black label-floating is-empty">
+                                                <label class="control-label">Price</label>
+                                                <input type="number" class="form-control" #price>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <button type="button" class="btn btn-danger pull-right" (click)="submit(name.value, phone.value, item.value, price.value)">Submit</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

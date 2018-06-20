@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngIf="ilinks">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Instituition</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let link of ilinks">
+                                    <td><a href="{{ link[1] }}" target="_blank">{{ link[0] }} </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" *ngIf="slinks">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Student Union</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let link of slinks">
+                                    <td><a href="{{ link[1] }}" target="_blank">{{ link[0] }} </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

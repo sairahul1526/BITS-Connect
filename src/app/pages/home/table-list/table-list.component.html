@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Ideas to improve the Campus</h4>
+                        <p class="category"></p>
+                    </div>
+                    <div class="card-content">
+                        <form name="myForm">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating is-empty">
+                                        <label class="control-label">Full Name</label>
+                                        <input type="text" class="form-control" #name>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating is-empty">
+                                        <label class="control-label">Email address</label>
+                                        <input type="email" class="form-control" #email>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating is-empty">
+                                        <label class="control-label">Mobile Number</label>
+                                        <input type="number" class="form-control" #phone>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group form-black label-floating is-empty">
+                                        <label class="control-label">Bhawan &amp; Room number</label>
+                                        <input type="text" class="form-control" #room>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Idea/Suggestion</label>
+                                        <div class="form-group form-black label-floating is-empty">
+                                            <label class="control-label"></label>
+                                            <textarea class="form-control" rows="5" #complaint></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <button type="button" class="btn btn-danger pull-right" (click)="submit(name.value, email.value, phone.value, room.value, complaint.value)">Submit</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    

@@ -1,0 +1,20 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngFor="let timing of timings">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">{{ timing[0] }}</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                            <b>{{ timing[1] }} </b>
+                            <p>{{ timing[2] }} &amp; {{ timing[3] }}</p>
+                            <b *ngIf="timing[4]">{{ timing[4] }}</b>
+                            <p *ngIf="timing[4]">{{ timing[5] }} &amp; {{ timing[6] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

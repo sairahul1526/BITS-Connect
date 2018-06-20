@@ -1,0 +1,22 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row" *ngIf="papers">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header" data-background-color="red">
+                      <h4 class="title">Papers</h4>
+                  </div>
+                  <div class="card-content table-responsive">
+                      <table class="table">
+                          <tbody>
+                              <tr *ngFor="let paper of papers">
+                                  <td class="text-danger"><a href="{{ paper[1] }}" target="_blank">{{ paper[0] }}</a></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

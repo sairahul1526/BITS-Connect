@@ -1,0 +1,18 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngFor="let contact of contacts">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">{{ contact[0] }}</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                            <p>{{ contact[1] }} - <a href="tel: + {{ contact[2] }}">{{ contact[2] }}</a></p>
+                            <p>{{ contact[3] }} - <a href="tel: + {{ contact[4] }}">{{ contact[4] }}</a></p>
+                            <p>{{ contact[5] }} - <a href="tel: + {{ contact[6] }}">{{ contact[6] }}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row" *ngIf="dates">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Campus Calendar</h4>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let date of dates">
+                                    <td>{{ date[0] }}</td>
+                                    <td class="text-danger">{{ date[1] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
