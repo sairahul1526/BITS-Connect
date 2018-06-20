@@ -1,4 +1,5 @@
 # BITS-Connect
+Used theme - https://www.creative-tim.com/product/material-dashboard-angular2
 
 Internal app for BITS Pilani - Pilani Campus
 
